@@ -1,38 +1,126 @@
-.App {
+.app {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.exchange-header {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  color: #f14ebd;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input {
+  border: 1px solid #333;
+  border-radius: 0.3rem;
+  padding: 0.42rem;
+  width: 7rem;
+  margin-left: 10rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+select {
+  margin-left: 0.5rem;
+}
+
+.item-container {
+  /* border: 2px solid rgb(238, 225, 88); */
+  border-radius: 6px;
+  background-color: lemonchiffon;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 4px 6px 8px 3px rgba(198, 201, 40, 0.68);
+
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item-container h1 {
+  font-size: 1.3rem;
+}
+
+.list-btn {
+  max-height: 3rem;
+}
+
+.btns {
+  margin: 2rem auto;
+}
+
+.button-general {
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin: 0 0.4em 0.1em 0.2em;
+  border: 0.16em solid rgba(255, 255, 255, 0);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #ffffff;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  text-align: center;
+  transition: all 0.2s;
+  background-color: #9a4ef1;
+}
+
+.button-general:hover {
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+/*      TABLE                 */
+#table {
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 60vw;
+  margin: 1rem auto;
+}
+
+#table td,
+#students th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#table tr:hover {
+  background-color: #ddd;
+}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4caf50;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.btns-update {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputs-update {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputs-update input {
+  margin: 1rem;
 }
