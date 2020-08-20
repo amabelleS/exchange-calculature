@@ -17,40 +17,25 @@ export default function Exchange(props) {
   };
 
   return (
-    <div>
+    <div className="flex-col calc-container small-card">
       <h1 className="exchange-header">Exchange</h1>
       <ExchangeForm currencyList={currencyList} addResult={addResult} />
-      <div className="btns">
-        <Link to="/update" className="button-general">
+      <div className="text-center m-3">
+        <Link to="/update" className="badge badge-primary">
           Update
         </Link>
-        {/* <a
-          target="_blank"
-          href="https://meetflo.zendesk.com/hc/en-us/articles/230425728-Privacy-Policies"
+        <a
+          href="https://www.xe.com/currencyconverter/"
+          className="badge"
+          style={{ backgroundColor: "#4e9af1", color: "#f4f4f4" }}
         >
-          Policies
-        </a> */}
-        {/* <Link
-          to={{
-            pathname:
-              "https://example.zendesk.com/hc/en-us/articles/123456789-Privacy-Policies",
-          }}
-          target="_blank"
-        /> */}
-        <Link
-          to="https://m.facebook.com/home.php"
-          className="button-general"
-          style={{ backgroundColor: "#4e9af1" }}
-        >
-          facebook
-        </Link>
-        {/* <a href="https://m.facebook.com/home.php" class="button3">
-          facebook
-        </a> */}
+          XE Currency Converter
+        </a>
         <button
           onClick={() => setShow(!showList)}
-          className="button-general"
-          style={{ backgroundColor: "#f14ebd", padding: "0.3rem" }}
+          className="badge badge-light"
+          style={{ color: "#dc35c6" }}
+          // style={{ backgroundColor: "#f14ebd", padding: "0.3rem" }}
         >
           {showList ? "hide list" : "View your exchnge list"}
         </button>

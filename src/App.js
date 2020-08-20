@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Exchange from "./Pages/Exchange";
 import Update from "./Pages/Update";
+import Navbar from "./Components/Layout/Navbar";
 
 export default function App() {
   const initialCurrencies = [
@@ -46,37 +47,36 @@ export default function App() {
   };
 
   return (
-    <div className="app">
-      <Router>
-        <Switch>
-          <Route
-            exact
-            path="/"
-            component={() => {
-              return (
-                <Exchange
-                  currencyList={currencyList}
-                  addResult={addResult}
-                  results={results}
-                  deleteExchange={deleteExchange}
-                />
-              );
-            }}
-          />
-          <Route
-            exact
-            path="/update"
-            component={() => {
-              return (
-                <Update
-                  currencyList={currencyList}
-                  updateCurrencies={updateCurrencies}
-                />
-              );
-            }}
-          />
-        </Switch>
-      </Router>
-    </div>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route
+          exact
+          path="/"
+          component={() => {
+            return (
+              <Exchange
+                currencyList={currencyList}
+                addResult={addResult}
+                results={results}
+                deleteExchange={deleteExchange}
+              />
+            );
+          }}
+        />
+        <Route
+          exact
+          path="/update"
+          component={() => {
+            return (
+              <Update
+                currencyList={currencyList}
+                updateCurrencies={updateCurrencies}
+              />
+            );
+          }}
+        />
+      </Switch>
+    </Router>
   );
 }

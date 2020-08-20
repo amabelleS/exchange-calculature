@@ -45,39 +45,42 @@ export default function Update(props) {
 
   return (
     <div>
-      <h2 style={{ color: "#9a4ef1" }}>UPDATE</h2>
-      <table id="table">
+      <h2 className="text-center text-dark">UPDATE</h2>
+      <table className="table">
         <thead>{renderTableHeader()}</thead>
         <tbody>{renderTableCoins()}</tbody>
       </table>
       <br />
-      <div className="inputs-update">
-        Type{" "}
-        <input
-          name="type"
-          type="text"
-          value={type}
-          onChange={(e) => setType(e.target.value)}
-        ></input>
-        New Value{" "}
-        <input
-          name="value"
-          type="number"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-        ></input>{" "}
-      </div>
-      <div className="btns-update">
-        <Link className="button-general" to="/">
-          Back
-        </Link>
-        <button
-          disabled={!type || !value}
-          className="button-general"
-          onClick={handelSubmit}
-        >
-          {type && value ? "Update" : "enter currency info"}
-        </button>
+      <div className="all-center">
+        <div className="p-2">
+          Type{" "}
+          <input
+            style={{ marginRight: "2rem" }}
+            name="type"
+            type="text"
+            value={type}
+            onChange={(e) => setType(e.target.value)}
+          ></input>
+          New Value{" "}
+          <input
+            name="value"
+            type="number"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+          ></input>{" "}
+        </div>
+        <div className="grid-2">
+          <Link className="btn btn-dark" to="/">
+            Back
+          </Link>
+          <button
+            disabled={!type || !value}
+            className="btn btn-primary"
+            onClick={handelSubmit}
+          >
+            {type && value ? "Update" : "enter currency info"}
+          </button>
+        </div>
       </div>
     </div>
   );

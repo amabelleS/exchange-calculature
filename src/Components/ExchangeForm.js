@@ -49,40 +49,43 @@ export default function ExchangeForm(props) {
 
   return (
     <div>
-      <div className="flex-row">
-        <label htmlFor="fromCurrency">From</label>
-        <select
-          name="fromCurrency"
-          value={fromCurrency}
-          onChange={(e) => handelSelectFrom(e)}
-        >
-          {" "}
-          {options()}
-        </select>{" "}
+      <div className="flex-col">
         <input
-          className="input"
+          className="btn btn-light btn-block"
           type="number"
           value={amount}
           onChange={handleAmount}
           placeholder="Ex: 42"
         />
-      </div>
-      <br />
-      <div className="flex-row">
-        <label htmlFor="toCurrency">To</label>
-        <select name="toCurrency" value={toCurrency} onChange={handelSelectTo}>
-          {options()}
-        </select>
+
+        <div className="grid-2 my-2">
+          <div>
+            <label htmlFor="fromCurrency">From</label>
+            <select
+              name="fromCurrency"
+              value={fromCurrency}
+              onChange={(e) => handelSelectFrom(e)}
+            >
+              {options()}
+            </select>
+          </div>
+          <div>
+            <label htmlFor="toCurrency">To</label>
+            <select
+              name="toCurrency"
+              value={toCurrency}
+              onChange={handelSelectTo}
+            >
+              {options()}
+            </select>
+          </div>
+        </div>
       </div>
 
       <button
         onClick={handelExchange}
-        className="button-general"
+        className="btn btn-primary btn-block my-3"
         disabled={!amount}
-        style={{
-          backgroundColor: "#74f14e",
-          margin: "3rem",
-        }}
       >
         START
       </button>
