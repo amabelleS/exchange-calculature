@@ -3,7 +3,7 @@ import ExchangeItem from "./ExchangeItem";
 
 export default function ExchangeList({ results, deleteExchange }) {
   return (
-    <div>
+    <div className="grid-4">
       {results.map((item, i) => {
         return (
           <ExchangeItem

@@ -18,7 +18,7 @@ export default function Exchange(props) {
 
   return (
     <div className="flex-col calc-container small-card">
-      <h1 className="exchange-header">Exchange</h1>
+      <h1 className="exchange-header">My exchange list</h1>
       <ExchangeForm currencyList={currencyList} addResult={addResult} />
       <div className="text-center m-3">
         <Link to="/update" className="badge badge-primary">
@@ -37,7 +37,11 @@ export default function Exchange(props) {
           style={{ color: "#dc35c6" }}
           // style={{ backgroundColor: "#f14ebd", padding: "0.3rem" }}
         >
-          {showList ? "hide list" : "View your exchnge list"}
+          {results.length > 0
+            ? showList
+              ? "hide list"
+              : "View your exchnge list"
+            : "Enter exchange"}
         </button>
       </div>
       {ShowExchangeList()}
