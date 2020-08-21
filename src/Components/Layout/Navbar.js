@@ -1,6 +1,7 @@
 import React from "react";
 // import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+// import logo from "../../img/eLogo.png";
 
 export default function Navbar({
   icon = "fas fa-calculator",
@@ -10,6 +11,7 @@ export default function Navbar({
   return (
     <nav className="navbar bg-third">
       <h1>
+        {/* <img src={logo} /> */}
         <i className={icon} style={{ margin: "auto 1rem" }}></i>
         {title}
       </h1>

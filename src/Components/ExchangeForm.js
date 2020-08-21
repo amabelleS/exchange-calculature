@@ -56,6 +56,7 @@ export default function ExchangeForm(props) {
           value={amount}
           onChange={handleAmount}
           placeholder="Ex: 42"
+          autoFocus
         />
 
         <div className="grid-2 my-2">

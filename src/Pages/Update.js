@@ -60,6 +60,8 @@ export default function Update(props) {
             type="text"
             value={type}
             onChange={(e) => setType(e.target.value)}
+            autoFocus
+            placeholder="enter your currency name"
           ></input>
           New Value{" "}
           <input
@@ -67,6 +69,8 @@ export default function Update(props) {
             type="number"
             value={value}
             onChange={(e) => setValue(e.target.value)}
+            placeholder="enter the rate value"
+            className="form-control"
           ></input>{" "}
         </div>
         <div className="grid-2">

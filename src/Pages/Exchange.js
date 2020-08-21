@@ -18,7 +18,7 @@ export default function Exchange(props) {
 
   return (
     <div className="flex-col calc-container small-card">
-      <h1 className="exchange-header">My exchange list</h1>
+      <h1 className="exchange-header py-2">My exchange list</h1>
       <ExchangeForm currencyList={currencyList} addResult={addResult} />
       <div className="text-center m-3">
         <Link to="/update" className="badge badge-primary">
